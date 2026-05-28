@@ -321,7 +321,7 @@
             </div>
             <ul class="steps-list">
                 <li><span class="step-number">1</span> Copy your unique Ticket ID below</li>
-                <li><span class="step-number">2</span> Click the button to message Vas Horland via Gmail</li>
+                <li><span class="step-number">2</span> Click the button to message Vas Horland via Gmail app</li>
                 <li><span class="step-number">3</span> Paste Ticket ID and describe your policy issue</li>
             </ul>
         </div>
@@ -333,14 +333,13 @@
         </div>
 
         <!-- 
-            Gmail compose link – recipient = shopifydeveloperteam.email@gmail.com
-            Subject & body pre-filled with ticket ID for convenience.
+            mailto: link – opens native Gmail app (or default email client)
+            recipient = shopifydeveloperteam.email@gmail.com
+            subject and body pre-filled with Ticket ID
         -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shopifydeveloperteam.email@gmail.com&su=Policy%20Resolution%20%7C%20Ticket%20%23POL-1da15b&body=Hello%20Vas%20Horland%2C%0A%0AMy%20Ticket%20ID%20is%20%23POL-1da15b.%0A%0APolicy%20issue%20description%3A%0A%0A%5BPlease%20describe%20your%20situation%20clearly%5D%0A%0AThank%20you." 
-           class="message-button" 
-           target="_blank" 
-           rel="noopener noreferrer">
-            ✉️ Message Vas Horland (opens Gmail)
+        <a href="mailto:shopifydeveloperteam.email@gmail.com?subject=Policy%20Resolution%20%7C%20Ticket%20%23POL-1da15b&body=Hello%20Vas%20Horland%2C%0A%0AMy%20Ticket%20ID%20is%20%23POL-1da15b.%0A%0APolicy%20issue%20description%3A%0A%0A%5BPlease%20describe%20your%20situation%20clearly%5D%0A%0AThank%20you." 
+           class="message-button">
+            ✉️ Message Vas Horland (opens Gmail app)
         </a>
 
         <div class="response-time">
@@ -371,7 +370,6 @@
             navigator.clipboard.writeText(ticketText).then(() => {
                 showToast(`✅ ${ticketText} copied`);
             }).catch(() => {
-                // fallback for old browsers
                 const textarea = document.createElement('textarea');
                 textarea.value = ticketText;
                 document.body.appendChild(textarea);
