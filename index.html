@@ -21,7 +21,6 @@
             padding: 1.5rem;
         }
 
-        /* Card Design - Elegant, Modern, Trustworthy */
         .resolution-card {
             max-width: 680px;
             width: 100%;
@@ -37,18 +36,15 @@
             box-shadow: 0 30px 55px -12px rgba(0, 0, 0, 0.3);
         }
 
-        /* Header Accent */
         .header-accent {
             height: 6px;
             background: linear-gradient(90deg, #1e3a8a, #3b82f6, #38bdf8);
         }
 
-        /* Content */
         .card-content {
             padding: 2rem 2rem 2rem 2rem;
         }
 
-        /* Status Badge */
         .status-badge {
             display: inline-flex;
             align-items: center;
@@ -72,7 +68,6 @@
             box-shadow: 0 0 0 2px #ecfdf5, 0 0 0 4px #10b981;
         }
 
-        /* Title & Specialist */
         .specialist-title {
             font-size: 2rem;
             font-weight: 700;
@@ -120,7 +115,6 @@
             gap: 0.3rem;
         }
 
-        /* Description Box */
         .description-box {
             background: #f8fafc;
             padding: 1.4rem;
@@ -132,7 +126,6 @@
             font-size: 0.95rem;
         }
 
-        /* Steps Section */
         .steps-section {
             margin: 1.8rem 0 1.2rem 0;
         }
@@ -180,7 +173,6 @@
             box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
 
-        /* Ticket ID Section */
         .ticket-area {
             background: #fef9e3;
             border-radius: 1.2rem;
@@ -228,7 +220,6 @@
             border-color: #f59e0b;
         }
 
-        /* Message Button - Gmail Link */
         .message-button {
             display: inline-flex;
             align-items: center;
@@ -274,7 +265,6 @@
             }
         }
 
-        /* Toast message */
         .toast-msg {
             visibility: hidden;
             min-width: 200px;
@@ -304,12 +294,10 @@
 <div class="resolution-card">
     <div class="header-accent"></div>
     <div class="card-content">
-        <!-- Status indicator -->
         <div class="status-badge">
             <span class="dot"></span> ✅ Direct line to your Policy Expert
         </div>
 
-        <!-- Professional intro & title -->
         <div class="specialist-title">
             Policy Resolution Expert
         </div>
@@ -319,7 +307,6 @@
             <span class="availability">🟢 Available now</span>
         </div>
 
-        <!-- Professional context: policy resolution expert -->
         <div class="description-box">
             Vas Horland is your dedicated <strong>Policy Resolution Expert</strong> — here to resolve 
             compliance flags, navigate Shopify’s Acceptable Use Policy, and guide you through account 
@@ -328,7 +315,6 @@
             support to restore your operations.
         </div>
 
-        <!-- Steps for engagement -->
         <div class="steps-section">
             <div class="steps-title">
                 📋 How to proceed
@@ -340,19 +326,21 @@
             </ul>
         </div>
 
-        <!-- Ticket ID row + copy -->
         <div class="ticket-area">
             <span class="ticket-label">🎫 Ticket ID:</span>
-            <span class="ticket-id" id="ticketId">#1da15b</span>
+            <span class="ticket-id" id="ticketId">#POL-1da15b</span>
             <button class="copy-btn" id="copyTicketBtn">📋 Copy ID</button>
         </div>
 
-        <!-- Gmail Message Button (Opens Gmail Compose) -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shopifydeveloperteam.email@gmail.com&su=Policy%20Resolution%20Request%20%7C%20Ticket%20%231da15b&body=Hello%20Vas%20Horland%2C%0A%0AMy%20Ticket%20ID%20is%20%231da15b.%0A%0AI%20need%20assistance%20regarding%20a%20policy%20enforcement%20issue%3A%0A%0A%5BPlease%20describe%20your%20situation%20clearly%5D%0A%0AThank%20you." 
+        <!-- 
+            Gmail compose link – recipient = shopifydeveloperteam.email@gmail.com
+            Subject & body pre-filled with ticket ID for convenience.
+        -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shopifydeveloperteam.email@gmail.com&su=Policy%20Resolution%20%7C%20Ticket%20%23POL-1da15b&body=Hello%20Vas%20Horland%2C%0A%0AMy%20Ticket%20ID%20is%20%23POL-1da15b.%0A%0APolicy%20issue%20description%3A%0A%0A%5BPlease%20describe%20your%20situation%20clearly%5D%0A%0AThank%20you." 
            class="message-button" 
            target="_blank" 
            rel="noopener noreferrer">
-            ✉️ Message Vas Horland
+            ✉️ Message Vas Horland (opens Gmail)
         </a>
 
         <div class="response-time">
@@ -383,7 +371,7 @@
             navigator.clipboard.writeText(ticketText).then(() => {
                 showToast(`✅ ${ticketText} copied`);
             }).catch(() => {
-                // fallback
+                // fallback for old browsers
                 const textarea = document.createElement('textarea');
                 textarea.value = ticketText;
                 document.body.appendChild(textarea);
