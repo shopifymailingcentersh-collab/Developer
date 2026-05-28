@@ -1,601 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-  <title>Autoresponder Support | Direct Specialist Chat</title>
-  <!-- Google Fonts: Inter (modern, clean) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Policy Resolution Expert | Shopify Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background: #f4f7fc;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      padding: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
+        body {
+            background: linear-gradient(145deg, #f1f5f9 0%, #e6edf4 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
 
-    /* main card container */
-    .support-card {
-      max-width: 620px;
-      width: 100%;
-      margin: 0 auto;
-      background: #ffffff;
-      border-radius: 28px;
-      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
-      overflow: hidden;
-      transition: all 0.2s ease;
-      border-top: 5px solid #10b981;  /* green accent top border */
-    }
+        /* Card Design - Elegant, Modern, Trustworthy */
+        .resolution-card {
+            max-width: 680px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
 
-    .card-inner {
-      padding: 1.75rem 1.5rem 2rem 1.5rem;
-    }
+        .resolution-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 30px 55px -12px rgba(0, 0, 0, 0.3);
+        }
 
-    /* direct line tag */
-    .direct-tag {
-      display: inline-block;
-      background: #e6f7ec;
-      color: #0e6b3e;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      padding: 0.3rem 0.9rem;
-      border-radius: 40px;
-      margin-bottom: 1.25rem;
-      border: 1px solid #b9f5cf;
-      backdrop-filter: blur(2px);
-    }
+        /* Header Accent */
+        .header-accent {
+            height: 6px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6, #38bdf8);
+        }
 
-    /* specialist section: avatar + info */
-    .specialist-row {
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin-bottom: 1.25rem;
-    }
+        /* Content */
+        .card-content {
+            padding: 2rem 2rem 2rem 2rem;
+        }
 
-    .avatar-wrapper {
-      position: relative;
-      flex-shrink: 0;
-    }
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ecfdf5;
+            color: #047857;
+            padding: 0.35rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid #a7f3d0;
+        }
 
-    .avatar {
-      width: 64px;
-      height: 64px;
-      background: #eef2ff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #1f2b48;
-      background: linear-gradient(135deg, #e6f0fa 0%, #d9e6f5 100%);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
-      transition: transform 0.2s;
-    }
+        .status-badge .dot {
+            width: 10px;
+            height: 10px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 2px #ecfdf5, 0 0 0 4px #10b981;
+        }
 
-    .online-dot {
-      position: absolute;
-      bottom: 2px;
-      right: 2px;
-      width: 14px;
-      height: 14px;
-      background-color: #22c55e;
-      border: 2px solid white;
-      border-radius: 50%;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
+        /* Title & Specialist */
+        .specialist-title {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
 
-    .specialist-info {
-      flex: 1;
-    }
+        .expert-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
 
-    .your-specialist-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #5b6e8c;
-      background: #f0f2f5;
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 20px;
-      margin-bottom: 0.5rem;
-    }
+        .verified-badge {
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.2rem 0.75rem;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            border: 1px solid #bfdbfe;
+        }
 
-    .name-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.65rem;
-      margin-bottom: 0.5rem;
-    }
+        .availability {
+            background: #fefce8;
+            color: #854d0e;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.75rem;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
 
-    .specialist-name {
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #0a1c2f;
-      letter-spacing: -0.2px;
-    }
+        /* Description Box */
+        .description-box {
+            background: #f8fafc;
+            padding: 1.4rem;
+            border-radius: 1.25rem;
+            margin: 1.5rem 0;
+            border-left: 5px solid #3b82f6;
+            line-height: 1.5;
+            color: #1e293b;
+            font-size: 0.95rem;
+        }
 
-    .badge {
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.25rem 0.7rem;
-      border-radius: 50px;
-      background: #f0f4f9;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
+        /* Steps Section */
+        .steps-section {
+            margin: 1.8rem 0 1.2rem 0;
+        }
 
-    .badge-green {
-      background: #e2f9e6;
-      color: #0b6e3e;
-    }
+        .steps-title {
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-    .badge-blue {
-      background: #e9edff;
-      color: #1d4ed8;
-    }
+        .steps-list {
+            background: #f1f5f9;
+            border-radius: 1.25rem;
+            padding: 1rem 1.5rem;
+            list-style: none;
+        }
 
-    .description {
-      font-size: 0.9rem;
-      line-height: 1.45;
-      color: #2c3e50;
-      margin: 0.8rem 0 1.2rem 0;
-      padding-right: 0.25rem;
-    }
+        .steps-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-weight: 500;
+        }
 
-    /* how to proceed section */
-    .steps-section {
-      margin: 1.5rem 0 1rem;
-    }
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
 
-    .section-title {
-      font-weight: 600;
-      font-size: 1.05rem;
-      margin-bottom: 0.9rem;
-      color: #1e2a3e;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+        .step-number {
+            background: #ffffff;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            font-weight: 800;
+            color: #1e40af;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
 
-    .steps-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
+        /* Ticket ID Section */
+        .ticket-area {
+            background: #fef9e3;
+            border-radius: 1.2rem;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.2rem 0 1.8rem 0;
+            border: 1px solid #fde68a;
+        }
 
-    .step-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: #f9fafc;
-      padding: 0.7rem 1rem;
-      border-radius: 18px;
-      transition: background 0.2s;
-    }
+        .ticket-label {
+            font-weight: 700;
+            color: #92400e;
+            font-size: 0.9rem;
+        }
 
-    .step-number {
-      width: 32px;
-      height: 32px;
-      background: #eef2ff;
-      border-radius: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #10b981;
-      font-size: 1rem;
-    }
+        .ticket-id {
+            font-family: 'SF Mono', 'JetBrains Mono', monospace;
+            font-weight: 800;
+            background: white;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            border: 1px solid #fcd34d;
+        }
 
-    .step-text {
-      font-weight: 500;
-      color: #1f2a40;
-      font-size: 0.9rem;
-    }
+        .copy-btn {
+            background: #ffffff;
+            border: 1px solid #fbbf24;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #b45309;
+        }
 
-    .reply-note {
-      font-size: 0.78rem;
-      color: #5b6e8c;
-      background: #f8fafc;
-      padding: 0.5rem 0.8rem;
-      border-radius: 40px;
-      display: inline-block;
-      margin: 0.5rem 0 1.25rem 0;
-    }
+        .copy-btn:hover {
+            background: #fffbeb;
+            border-color: #f59e0b;
+        }
 
-    /* ticket ID area */
-    .ticket-area {
-      background: #f8fafd;
-      border-radius: 20px;
-      padding: 0.9rem 1.2rem;
-      margin: 1.2rem 0 1.5rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      border: 1px solid #e9edf2;
-    }
+        /* Message Button - Gmail Link */
+        .message-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: linear-gradient(95deg, #1e3a8a, #2563eb);
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.9rem 1.5rem;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            width: 100%;
+            border: none;
+            box-shadow: 0 8px 14px -6px rgba(37, 99, 235, 0.3);
+        }
 
-    .ticket-label {
-      font-weight: 500;
-      color: #2d3a4b;
-      font-size: 0.85rem;
-    }
+        .message-button:hover {
+            background: linear-gradient(95deg, #1e3a8a, #1d4ed8);
+            transform: scale(1.01);
+            box-shadow: 0 12px 20px -8px rgba(37, 99, 235, 0.45);
+        }
 
-    .ticket-id {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-weight: 600;
-      background: #ffffff;
-      padding: 0.3rem 0.8rem;
-      border-radius: 40px;
-      color: #0e2a44;
-      letter-spacing: 0.3px;
-      font-size: 0.9rem;
-      border: 1px solid #dfe6ef;
-    }
+        .response-time {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 1.2rem;
+            border-top: 1px solid #eef2ff;
+            padding-top: 1rem;
+        }
 
-    .copy-btn {
-      background: #eef2fa;
-      border: none;
-      font-family: 'Inter', monospace;
-      font-weight: 500;
-      font-size: 0.8rem;
-      padding: 0.45rem 1rem;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      color: #1f3a5f;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
+        @media (max-width: 550px) {
+            .card-content {
+                padding: 1.5rem;
+            }
+            .specialist-title {
+                font-size: 1.5rem;
+            }
+            .expert-name {
+                font-size: 1.3rem;
+            }
+        }
 
-    .copy-btn:hover {
-      background: #e2e9f3;
-      transform: scale(0.97);
-    }
-
-    .copy-btn.copied-effect {
-      background: #10b981;
-      color: white;
-      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-    }
-
-    /* message button */
-    .message-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      background: #10b981;
-      color: white;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.9rem 0;
-      border-radius: 60px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      margin: 0.8rem 0 1.2rem 0;
-      box-shadow: 0 6px 14px rgba(16, 185, 129, 0.25);
-      border: none;
-      gap: 8px;
-    }
-
-    .message-button:hover {
-      background: #0d9f6e;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 20px -10px rgba(16, 185, 129, 0.4);
-    }
-
-    .privacy-footer {
-      font-size: 0.7rem;
-      text-align: center;
-      color: #6c7e9e;
-      border-top: 1px solid #ecf1f7;
-      padding-top: 1.2rem;
-      margin-top: 0.2rem;
-    }
-
-    /* toast custom */
-    .toast-notify {
-      position: fixed;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%) translateY(20px);
-      background: #1f2937;
-      color: white;
-      padding: 10px 22px;
-      border-radius: 60px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      z-index: 1000;
-      opacity: 0;
-      transition: opacity 0.25s, transform 0.25s;
-      pointer-events: none;
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, 0.85);
-      font-family: 'Inter', monospace;
-    }
-
-    .toast-notify.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    /* responsive */
-    @media (max-width: 500px) {
-      body {
-        padding: 1rem;
-      }
-      .card-inner {
-        padding: 1.3rem;
-      }
-      .specialist-name {
-        font-size: 1.25rem;
-      }
-      .avatar {
-        width: 54px;
-        height: 54px;
-        font-size: 1.5rem;
-      }
-      .name-badge-row {
-        gap: 0.5rem;
-      }
-      .ticket-area {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .copy-btn {
-        align-self: flex-start;
-      }
-    }
-
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+        /* Toast message */
+        .toast-msg {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #0f172a;
+            color: #fff;
+            text-align: center;
+            border-radius: 40px;
+            padding: 8px 16px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            white-space: nowrap;
+        }
+        .toast-msg.show {
+            visibility: visible;
+            opacity: 0.95;
+        }
+    </style>
 </head>
 <body>
 
-<div class="support-card">
-  <div class="card-inner">
-    
-    <!-- "Direct line to your specialist" tag -->
-    <div class="direct-tag">⚡ Direct line to your specialist</div>
-
-    <!-- Specialist section: avatar, status, label, name, badges -->
-    <div class="specialist-row">
-      <div class="avatar-wrapper">
-        <div class="avatar" id="avatarInitial">V</div>
-        <div class="online-dot"></div>
-      </div>
-      <div class="specialist-info">
-        <div class="your-specialist-label">Your specialist</div>
-        <div class="name-badge-row">
-          <span class="specialist-name" id="specialistNameDynamic">Vas horland</span>
-          <span class="badge badge-green">✅ Available now</span>
-          <span class="badge badge-blue">✓ Verified</span>
+<div class="resolution-card">
+    <div class="header-accent"></div>
+    <div class="card-content">
+        <!-- Status indicator -->
+        <div class="status-badge">
+            <span class="dot"></span> ✅ Direct line to your Policy Expert
         </div>
-        <p class="description" id="specialistDescription">
-          Vas horland is your dedicated autoresponder expert, offering fast, precise solutions and workflow guidance.
-        </p>
-      </div>
-    </div>
 
-    <!-- How to proceed section with 3 numbered steps -->
-    <div class="steps-section">
-      <div class="section-title">
-        <span>📋</span> How to proceed
-      </div>
-      <div class="steps-list">
-        <div class="step-item">
-          <div class="step-number">1</div>
-          <div class="step-text">Copy ticket ID below</div>
+        <!-- Professional intro & title -->
+        <div class="specialist-title">
+            Policy Resolution Expert
         </div>
-        <div class="step-item">
-          <div class="step-number">2</div>
-          <div class="step-text">Click to message [specialist]</div>
+        <div class="expert-name">
+            Vas Horland
+            <span class="verified-badge">✓ Verified Specialist</span>
+            <span class="availability">🟢 Available now</span>
         </div>
-        <div class="step-item">
-          <div class="step-number">3</div>
-          <div class="step-text">Paste ticket ID & describe your issue</div>
+
+        <!-- Professional context: policy resolution expert -->
+        <div class="description-box">
+            Vas Horland is your dedicated <strong>Policy Resolution Expert</strong> — here to resolve 
+            compliance flags, navigate Shopify’s Acceptable Use Policy, and guide you through account 
+            reinstatements with clarity and speed. Whether you're dealing with DMCA notices, 
+            restricted product categories, or Terms of Service appeals, Vas provides direct, human-led 
+            support to restore your operations.
         </div>
-      </div>
-    </div>
 
-    <!-- reply time note -->
-    <div class="reply-note">
-      ⏱️ Usually replies within a few minutes (Mon–Fri)
-    </div>
+        <!-- Steps for engagement -->
+        <div class="steps-section">
+            <div class="steps-title">
+                📋 How to proceed
+            </div>
+            <ul class="steps-list">
+                <li><span class="step-number">1</span> Copy your unique Ticket ID below</li>
+                <li><span class="step-number">2</span> Click the button to message Vas Horland via Gmail</li>
+                <li><span class="step-number">3</span> Paste Ticket ID and describe your policy issue</li>
+            </ul>
+        </div>
 
-    <!-- Ticket ID display + copy button -->
-    <div class="ticket-area">
-      <span class="ticket-label">🎫 Ticket ID:</span>
-      <span class="ticket-id" id="ticketIdDisplay">#1da15b</span>
-      <button class="copy-btn" id="copyTicketBtn">📋 Copy</button>
-    </div>
+        <!-- Ticket ID row + copy -->
+        <div class="ticket-area">
+            <span class="ticket-label">🎫 Ticket ID:</span>
+            <span class="ticket-id" id="ticketId">#1da15b</span>
+            <button class="copy-btn" id="copyTicketBtn">📋 Copy ID</button>
+        </div>
 
-    <!-- prominent green message button (WhatsApp link) -->
-    <a href="#" id="messageButton" class="message-button" target="_blank" rel="noopener noreferrer">
-      💬 Message <span id="messageBtnName">Vas horland</span>
-    </a>
+        <!-- Gmail Message Button (Opens Gmail Compose) -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shopifydeveloperteam.email@gmail.com&su=Policy%20Resolution%20Request%20%7C%20Ticket%20%231da15b&body=Hello%20Vas%20Horland%2C%0A%0AMy%20Ticket%20ID%20is%20%231da15b.%0A%0AI%20need%20assistance%20regarding%20a%20policy%20enforcement%20issue%3A%0A%0A%5BPlease%20describe%20your%20situation%20clearly%5D%0A%0AThank%20you." 
+           class="message-button" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            ✉️ Message Vas Horland
+        </a>
 
-    <!-- privacy footer with specialist name -->
-    <div class="privacy-footer" id="privacyFooterText">
-      Private, encrypted chat · Only you and Vas horland see this conversation
+        <div class="response-time">
+            ⏱️ Usually replies within a few minutes (Mon–Fri, 9 AM – 6 PM EST) <br>
+            Premium policy & compliance support.
+        </div>
     </div>
-  </div>
 </div>
 
-<!-- toast container -->
-<div id="toastMessage" class="toast-notify">Ticket ID copied!</div>
+<div id="toastMessage" class="toast-msg">Ticket ID copied!</div>
 
 <script>
-  // ============================================================
-  // ✨ EASY EDIT VARIABLES (change these 3 values as needed) ✨
-  // ============================================================
-  const CHAT_LINK = "shopifydeveloperteam.email@gmail.com";     // WhatsApp direct link for Vas horland
-  const TICKET_ID = "#1da15b";                    // ticket ID displayed and copied
-  const SPECIALIST_NAME = "Vas horland";           // specialist full name (auto-updates avatar, description, button, etc.)
-  // ============================================================
+    (function() {
+        const copyBtn = document.getElementById('copyTicketBtn');
+        const ticketSpan = document.getElementById('ticketId');
+        const toastEl = document.getElementById('toastMessage');
 
-  // DOM elements
-  const avatarDiv = document.getElementById('avatarInitial');
-  const specialistNameSpan = document.getElementById('specialistNameDynamic');
-  const descriptionPara = document.getElementById('specialistDescription');
-  const ticketIdSpan = document.getElementById('ticketIdDisplay');
-  const copyBtn = document.getElementById('copyTicketBtn');
-  const messageBtn = document.getElementById('messageButton');
-  const messageBtnNameSpan = document.getElementById('messageBtnName');
-  const privacyFooter = document.getElementById('privacyFooterText');
-  const toastEl = document.getElementById('toastMessage');
-
-  // helper to show toast with any custom message
-  let toastTimeout = null;
-  function showToast(message, duration = 2200) {
-    if (toastTimeout) clearTimeout(toastTimeout);
-    toastEl.textContent = message || 'Ticket ID copied!';
-    toastEl.classList.add('show');
-    toastTimeout = setTimeout(() => {
-      toastEl.classList.remove('show');
-    }, duration);
-  }
-
-  // update entire UI based on top variables
-  function updateUIFromVariables() {
-    // 1. Update specialist name everywhere
-    if (specialistNameSpan) specialistNameSpan.textContent = SPECIALIST_NAME;
-    
-    // 2. Avatar first letter (uppercase first character)
-    const firstLetter = SPECIALIST_NAME.trim().charAt(0).toUpperCase();
-    if (avatarDiv) avatarDiv.textContent = firstLetter;
-    
-    // 3. Description: introducing the specialist dynamically
-    descriptionPara.innerHTML = `${SPECIALIST_NAME} is your personal autoresponder specialist — ready to troubleshoot, optimize flows, and ensure your campaigns run smoothly. Direct, fast, and human support.`;
-    
-    // 4. Ticket ID display & copy targets
-    ticketIdSpan.textContent = TICKET_ID;
-    
-    // 5. Message button: update href with CHAT_LINK and button text with specialist name
-    if (messageBtn) {
-      messageBtn.href = CHAT_LINK;
-      // ensure valid link
-      if (!CHAT_LINK || CHAT_LINK === "") {
-        messageBtn.href = "#";
-        messageBtn.style.opacity = "0.6";
-        console.warn("CHAT_LINK is empty, button disabled");
-      } else {
-        messageBtn.style.opacity = "1";
-      }
-    }
-    if (messageBtnNameSpan) messageBtnNameSpan.textContent = SPECIALIST_NAME;
-    
-    // 6. Privacy footer: update name
-    if (privacyFooter) {
-      privacyFooter.innerHTML = `🔒 Private, encrypted chat · Only you and ${SPECIALIST_NAME} see this conversation`;
-    }
-    
-    // 7. also update the step2 text to include the specialist name
-    const stepItems = document.querySelectorAll('.step-item');
-    if (stepItems.length >= 2) {
-      const stepTwoText = stepItems[1].querySelector('.step-text');
-      if (stepTwoText) {
-        stepTwoText.innerHTML = `Click to message <strong>${SPECIALIST_NAME}</strong>`;
-      }
-    }
-  }
-
-  // COPY functionality with visual feedback & toast
-  let copyTimeoutId = null;
-  async function handleCopyTicket() {
-    const ticketValue = TICKET_ID;  // copy exact variable text
-    try {
-      await navigator.clipboard.writeText(ticketValue);
-      
-      // button visual: change text + green style
-      copyBtn.innerHTML = "✅ Copied!";
-      copyBtn.classList.add('copied-effect');
-      
-      // show toast notification (custom message)
-      showToast(`📋 Ticket ID ${ticketValue} copied to clipboard!`, 1800);
-      
-      // revert after 1.6 seconds
-      if (copyTimeoutId) clearTimeout(copyTimeoutId);
-      copyTimeoutId = setTimeout(() => {
-        copyBtn.innerHTML = "📋 Copy";
-        copyBtn.classList.remove('copied-effect');
-      }, 1600);
-    } catch (err) {
-      console.error('Copy failed', err);
-      showToast("⚠️ Unable to copy. Manual copy needed.", 2000);
-    }
-  }
-
-  // initialize copy button event (safe rebinding)
-  function initCopyEvent() {
-    if (copyBtn) {
-      const newCopyBtn = copyBtn.cloneNode(true);
-      copyBtn.parentNode.replaceChild(newCopyBtn, copyBtn);
-      window.copyBtn = newCopyBtn;
-      newCopyBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        handleCopyTicket();
-      });
-    }
-  }
-
-  // additional sync for step 2 text
-  function updateStepTwoText() {
-    const stepTwoDiv = document.querySelector('.step-item:nth-child(2) .step-text');
-    if (stepTwoDiv && SPECIALIST_NAME) {
-      stepTwoDiv.innerHTML = `Click to message <strong>${SPECIALIST_NAME}</strong>`;
-    }
-  }
-
-  // global initialization: apply all changes based on editable variables
-  function fullInit() {
-    updateUIFromVariables();
-    initCopyEvent();
-    updateStepTwoText();
-    // ensure message button name is set
-    if (messageBtnNameSpan) messageBtnNameSpan.textContent = SPECIALIST_NAME;
-    // handle edge case: if chat link is invalid, show warning on click
-    if (messageBtn && (!CHAT_LINK || CHAT_LINK === "#" || CHAT_LINK === "")) {
-      messageBtn.addEventListener('click', (e) => {
-        if (!CHAT_LINK || CHAT_LINK === "") {
-          e.preventDefault();
-          showToast("⚠️ Chat link not configured. Please set CHAT_LINK variable.", 2500);
+        function showToast(message) {
+            toastEl.textContent = message || 'Ticket ID copied!';
+            toastEl.classList.add('show');
+            setTimeout(() => {
+                toastEl.classList.remove('show');
+            }, 2000);
         }
-      });
-    } else if (messageBtn && CHAT_LINK) {
-      messageBtn.setAttribute('target', '_blank');
-    }
-  }
-  
-  // run after DOM ready
-  document.addEventListener('DOMContentLoaded', () => {
-    fullInit();
-  });
+
+        copyBtn.addEventListener('click', () => {
+            const ticketText = ticketSpan.innerText.trim();
+            navigator.clipboard.writeText(ticketText).then(() => {
+                showToast(`✅ ${ticketText} copied`);
+            }).catch(() => {
+                // fallback
+                const textarea = document.createElement('textarea');
+                textarea.value = ticketText;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast(`📋 ${ticketText} copied (fallback)`);
+            });
+        });
+    })();
 </script>
 </body>
 </html>
