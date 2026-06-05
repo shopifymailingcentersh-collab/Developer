@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Policy Resolution Expert | Shopify Support</title>
+    <title>Technical Resolution Expert | Shopify Developer Support</title>
     <style>
         * {
             margin: 0;
@@ -49,23 +49,23 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: #ecfdf5;
-            color: #047857;
+            background: #eff6ff;
+            color: #1e40af;
             padding: 0.35rem 1rem;
             border-radius: 40px;
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            border: 1px solid #a7f3d0;
+            border: 1px solid #bfdbfe;
         }
 
         .status-badge .dot {
             width: 10px;
             height: 10px;
-            background: #10b981;
+            background: #3b82f6;
             border-radius: 50%;
             display: inline-block;
-            box-shadow: 0 0 0 2px #ecfdf5, 0 0 0 4px #10b981;
+            box-shadow: 0 0 0 2px #eff6ff, 0 0 0 4px #3b82f6;
         }
 
         .specialist-title {
@@ -174,7 +174,7 @@
         }
 
         .ticket-area {
-            background: #fef9e3;
+            background: #eff6ff;
             border-radius: 1.2rem;
             padding: 0.8rem 1.2rem;
             display: flex;
@@ -183,12 +183,12 @@
             flex-wrap: wrap;
             gap: 1rem;
             margin: 1.2rem 0 1.8rem 0;
-            border: 1px solid #fde68a;
+            border: 1px solid #bfdbfe;
         }
 
         .ticket-label {
             font-weight: 700;
-            color: #92400e;
+            color: #1e3a8a;
             font-size: 0.9rem;
         }
 
@@ -200,24 +200,24 @@
             border-radius: 40px;
             letter-spacing: 0.5px;
             color: #0f172a;
-            border: 1px solid #fcd34d;
+            border: 1px solid #93c5fd;
         }
 
         .copy-btn {
             background: #ffffff;
-            border: 1px solid #fbbf24;
+            border: 1px solid #60a5fa;
             padding: 0.4rem 1rem;
             border-radius: 40px;
             font-weight: 600;
             font-size: 0.8rem;
             cursor: pointer;
             transition: 0.2s;
-            color: #b45309;
+            color: #1e40af;
         }
 
         .copy-btn:hover {
-            background: #fffbeb;
-            border-color: #f59e0b;
+            background: #eff6ff;
+            border-color: #3b82f6;
         }
 
         .message-button {
@@ -295,56 +295,52 @@
     <div class="header-accent"></div>
     <div class="card-content">
         <div class="status-badge">
-            <span class="dot"></span> ✅ Direct line to your Policy Expert
+            <span class="dot"></span> ⚙️ Direct line to your Technical Expert
         </div>
 
         <div class="specialist-title">
-            Policy Resolution Expert
+            Technical Resolution Expert
         </div>
         <div class="expert-name">
             Vas Horland
-            <span class="verified-badge">✓ Verified Specialist</span>
+            <span class="verified-badge">✓ Senior Engineer</span>
             <span class="availability">🟢 Available now</span>
         </div>
 
         <div class="description-box">
-            Vas Horland is your dedicated <strong>Policy Resolution Expert</strong> — here to resolve 
-            compliance flags, navigate Shopify’s Acceptable Use Policy, and guide you through account 
-            reinstatements with clarity and speed. Whether you're dealing with DMCA notices, 
-            restricted product categories, or Terms of Service appeals, Vas provides direct, human-led 
-            support to restore your operations.
+            Vas Horland is your dedicated <strong>Technical Resolution Expert</strong> — specializing in debugging Shopify Liquid, REST & GraphQL API issues, theme conflicts, slow checkout performance, webhook errors, and app integration failures. Whether you're facing cryptic console errors, 500 server responses, broken scripts, or custom code malfunctions, Vas delivers fast, human-led root cause analysis and production-grade fixes to restore your storefront functionality.
         </div>
 
         <div class="steps-section">
             <div class="steps-title">
-                📋 How to proceed
+                🛠️ How to proceed (technical workflow)
             </div>
             <ul class="steps-list">
-                <li><span class="step-number">1</span> Copy your unique Ticket ID below</li>
+                <li><span class="step-number">1</span> Copy your unique Developer Ticket ID below</li>
                 <li><span class="step-number">2</span> Click the button to message Vas Horland via Gmail app</li>
-                <li><span class="step-number">3</span> Paste Ticket ID and describe your policy issue</li>
+                <li><span class="step-number">3</span> Paste Ticket ID and describe your technical issue (include error logs/console output)</li>
             </ul>
         </div>
 
         <div class="ticket-area">
-            <span class="ticket-label">🎫 Ticket ID:</span>
-            <span class="ticket-id" id="ticketId">#POL-1da15b</span>
+            <span class="ticket-label">🔧 Developer Ticket ID:</span>
+            <span class="ticket-id" id="ticketId">#TECH-1da15b</span>
             <button class="copy-btn" id="copyTicketBtn">📋 Copy ID</button>
         </div>
 
         <!-- 
-            mailto: link – opens native Gmail app (or default email client)
-            recipient = shopifydeveloperteam.email@gmail.com
-            subject and body pre-filled with Ticket ID
+            mailto: link – opens default email client (Gmail app on mobile)
+            recipient = shopifydeveloperteam.email@gmail.com (technical support)
+            subject and body pre-filled with Ticket ID + technical template
         -->
-        <a href="mailto:shopifydeveloperteam.email@gmail.com?subject=Policy%20Resolution%20%7C%20Ticket%20%23POL-1da15b&body=Hello%20Vas%20Horland%2C%0A%0AMy%20Ticket%20ID%20is%20%23POL-1da15b.%0A%0APolicy%20issue%20description%3A%0A%0A%5BPlease%20describe%20your%20situation%20clearly%5D%0A%0AThank%20you." 
+        <a href="mailto:shopifydeveloperteam.email@gmail.com?subject=Technical%20Resolution%20%7C%20Ticket%20%23TECH-1da15b&body=Hello%20Vas%20Horland%2C%0A%0AMy%20Technical%20Ticket%20ID%20is%20%23TECH-1da15b.%0A%0A%23%23%20Technical%20Issue%20Description%0A%5BDescribe%20your%20problem%20clearly%20-%20e.g.%20Liquid%20error%2C%20API%20timeout%2C%20checkout%20bug%2C%20JavaScript%20conflict%5D%0A%0A%23%23%20Steps%20to%20Reproduce%0A1.%20...%0A2.%20...%0A%0A%23%23%20Error%20Messages%20%2F%20Logs%20(if%20any)%0A%5BPaste%20error%20or%20console%20output%5D%0A%0AThank%20you." 
            class="message-button">
             ✉️ Message Vas Horland (opens Gmail app)
         </a>
 
         <div class="response-time">
-            ⏱️ Usually replies within a few minutes (Mon–Fri, 9 AM – 6 PM EST) <br>
-            Premium policy & compliance support.
+            ⏱️ Average response: 5–10 minutes (Mon–Fri, 9 AM – 6 PM EST) <br>
+            Deep expertise in Shopify core & custom development.
         </div>
     </div>
 </div>
