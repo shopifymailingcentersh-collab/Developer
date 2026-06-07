@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Primal Lux E-commerce | Specialist Support</title>
+    <title>Primal Lux | E-Commerce Growth Specialist</title>
     <style>
         * {
             margin: 0;
@@ -12,423 +12,399 @@
         }
 
         body {
-            background: linear-gradient(145deg, #f1f5f9 0%, #e6edf4 100%);
+            background: #f0f2f5;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
-        .resolution-card {
+        .support-card {
             max-width: 680px;
             width: 100%;
             background: #ffffff;
-            border-radius: 2rem;
-            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
-        .resolution-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 30px 55px -12px rgba(0, 0, 0, 0.3);
+        .support-card:hover {
+            transform: translateY(-2px);
         }
 
-        .header-accent {
-            height: 6px;
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6, #38bdf8);
+        /* Logo Header */
+        .logo-header {
+            background: #0a0c10;
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #2d2f36;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            background: #F9A826;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0a0c10;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: -0.5px;
+            color: white;
+        }
+
+        .logo-text span {
+            color: #F9A826;
+        }
+
+        .badge-header {
+            background: rgba(249, 168, 38, 0.15);
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #F9A826;
+            border: 1px solid rgba(249, 168, 38, 0.3);
         }
 
         .card-content {
-            padding: 2rem 2rem 2rem 2rem;
+            padding: 2rem;
         }
 
-        /* Logo section */
-        .logo-container {
+        .status-row {
             display: flex;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .brand-logo {
-            background: #0a0c10;
-            border-radius: 2rem;
-            padding: 0.6rem 1.8rem;
-            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .logo-icon {
-            font-size: 1.6rem;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-        }
-        
-        .logo-text {
-            font-weight: 800;
-            font-size: 1.3rem;
-            letter-spacing: -0.01em;
-            background: linear-gradient(135deg, #F9A826, #FFD166);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .logo-sub {
-            font-size: 0.7rem;
-            font-weight: 500;
-            color: #94a3b8;
-            letter-spacing: 0.5px;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        .status-badge {
+        .online-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             background: #ecfdf5;
-            color: #047857;
-            padding: 0.35rem 1rem;
+            color: #067647;
+            padding: 0.3rem 1rem;
             border-radius: 40px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            border: 1px solid #a7f3d0;
         }
 
-        .status-badge .dot {
-            width: 10px;
-            height: 10px;
-            background: #10b981;
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            background: #12b76a;
             border-radius: 50%;
             display: inline-block;
-            box-shadow: 0 0 0 2px #ecfdf5, 0 0 0 4px #10b981;
         }
 
-        .specialist-title {
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
+        .expert-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #475467;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.25rem;
         }
 
         .expert-name {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 0.75rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #101828;
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            gap: 0.6rem;
+            gap: 0.75rem;
         }
 
-        .verified-badge {
+        .verification {
             background: #fef3c7;
             color: #b45309;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.2rem 0.75rem;
-            border-radius: 30px;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            border: 1px solid #fde68a;
-        }
-
-        .availability {
-            background: #fefce8;
-            color: #854d0e;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            padding: 0.2rem 0.75rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 30px;
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
         }
 
-        .stats-row {
+        /* Stats Grid */
+        .stats-grid {
             display: flex;
-            flex-wrap: wrap;
             gap: 1rem;
-            background: linear-gradient(115deg, #0f172a 0%, #1e293b 100%);
-            border-radius: 1.25rem;
-            padding: 1rem 1.2rem;
-            margin: 1.2rem 0 1rem 0;
-            justify-content: space-between;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
         }
-        
-        .stat-item {
+
+        .stat-block {
             flex: 1;
+            background: #f9fafb;
+            border-radius: 1rem;
+            padding: 0.9rem 0.5rem;
             text-align: center;
+            border: 1px solid #eaecf0;
         }
-        
+
         .stat-number {
+            font-size: 1.6rem;
             font-weight: 800;
-            font-size: 1.5rem;
             color: #F9A826;
-            letter-spacing: -0.02em;
+            line-height: 1.2;
         }
-        
+
         .stat-label {
             font-size: 0.7rem;
             font-weight: 500;
-            color: #cbd5e1;
+            color: #475467;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
-        .description-box {
-            background: #f8fafc;
-            padding: 1.4rem;
-            border-radius: 1.25rem;
-            margin: 1.5rem 0;
-            border-left: 5px solid #F9A826;
+        .description {
+            background: #f9fafb;
+            padding: 1.25rem;
+            border-radius: 1rem;
+            margin: 1.25rem 0;
+            border-left: 4px solid #F9A826;
             line-height: 1.5;
-            color: #1e293b;
+            color: #344054;
             font-size: 0.95rem;
         }
 
-        .steps-section {
-            margin: 1.8rem 0 1.2rem 0;
+        .steps {
+            margin: 1.5rem 0;
         }
 
-        .steps-title {
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
+        .steps h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #101828;
+            margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .steps-list {
-            background: #f1f5f9;
-            border-radius: 1.25rem;
-            padding: 1rem 1.5rem;
-            list-style: none;
-        }
-
-        .steps-list li {
+        .step-item {
             display: flex;
             align-items: center;
-            gap: 0.9rem;
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #e2e8f0;
-            font-weight: 500;
-        }
-
-        .steps-list li:last-child {
-            border-bottom: none;
+            gap: 0.75rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #eaecf0;
         }
 
         .step-number {
-            background: #ffffff;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
+            background: #fff1e0;
+            color: #F9A826;
+            font-weight: 800;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            border-radius: 60px;
-            font-weight: 800;
-            color: #B45309;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            border-radius: 30px;
+            font-size: 0.8rem;
         }
 
-        .message-button {
+        .step-text {
+            font-weight: 500;
+            color: #1d2939;
+        }
+
+        .contact-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
-            background: linear-gradient(95deg, #0f172a, #1e293b);
+            background: #0a0c10;
             color: white;
             font-weight: 700;
             font-size: 1rem;
             padding: 0.9rem 1.5rem;
             border-radius: 60px;
             text-decoration: none;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
             width: 100%;
             border: none;
-            box-shadow: 0 8px 14px -6px rgba(0, 0, 0, 0.3);
-            margin-top: 0.5rem;
+            cursor: pointer;
+            margin: 0.5rem 0 0.5rem;
         }
 
-        .message-button:hover {
-            background: linear-gradient(95deg, #1e293b, #0f172a);
-            transform: scale(1.01);
-            box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.45);
+        .contact-btn:hover {
+            background: #F9A826;
+            color: #0a0c10;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.2);
         }
 
-        .response-time {
+        .response-footer {
             text-align: center;
-            font-size: 0.75rem;
-            color: #64748b;
-            margin-top: 1.2rem;
-            border-top: 1px solid #eef2ff;
+            font-size: 0.7rem;
+            color: #667085;
+            margin-top: 1.5rem;
             padding-top: 1rem;
-        }
-
-        @media (max-width: 550px) {
-            .card-content {
-                padding: 1.5rem;
-            }
-            .specialist-title {
-                font-size: 1.5rem;
-            }
-            .expert-name {
-                font-size: 1.3rem;
-            }
-            .stat-number {
-                font-size: 1.2rem;
-            }
+            border-top: 1px solid #eaecf0;
         }
 
         .toast-msg {
             visibility: hidden;
-            min-width: 200px;
-            background-color: #0f172a;
+            min-width: 220px;
+            background-color: #101828;
             color: #fff;
             text-align: center;
             border-radius: 40px;
-            padding: 8px 16px;
+            padding: 8px 20px;
             position: fixed;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.85rem;
             opacity: 0;
-            transition: opacity 0.3s;
+            transition: opacity 0.25s;
             z-index: 1000;
             white-space: nowrap;
+            font-weight: 500;
         }
         .toast-msg.show {
             visibility: visible;
-            opacity: 0.95;
+            opacity: 1;
         }
-        
-        /* subtle image placeholder using the provided text as badge */
-        .logo-img-badge {
-            background: #0a0c10;
-            border-radius: 60px;
-            padding: 0.3rem 1rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .brand-icon {
-            font-size: 1.3rem;
+
+        @media (max-width: 550px) {
+            body {
+                padding: 1rem;
+            }
+            .expert-name {
+                font-size: 1.6rem;
+            }
+            .card-content {
+                padding: 1.5rem;
+            }
+            .logo-text {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="resolution-card">
-    <div class="header-accent"></div>
+<div class="support-card">
+    <!-- Professional Logo Header - Primal Lux E-commerce -->
+    <div class="logo-header">
+        <div class="logo-area">
+            <div class="logo-icon">PL</div>
+            <div class="logo-text">PRIMAL <span>LUX</span></div>
+        </div>
+        <div class="badge-header">E-COMMERCE PARTNER</div>
+    </div>
+
     <div class="card-content">
-        <!-- Logo section: representation of "Primal Lux E-commerce" with image-like style -->
-        <div class="logo-container">
-            <div class="brand-logo">
-                <span class="logo-icon">🛍️</span>
-                <span class="logo-text">PRIMAL LUX</span>
-                <span class="logo-sub">E-COMMERCE</span>
+        <div class="status-row">
+            <div class="online-badge">
+                <span class="online-dot"></span> Live Support
+            </div>
+            <div class="online-badge" style="background:#eff8ff; color:#175cd3;">
+                ⚡ Priority Access
             </div>
         </div>
-        
-        <div class="status-badge">
-            <span class="dot"></span> ✅ Direct line to your Growth Specialist
-        </div>
 
-        <div class="specialist-title">
-            E-Commerce Success Expert
-        </div>
+        <div class="expert-title">E-COMMERCE GROWTH SPECIALIST</div>
         <div class="expert-name">
-            Jordan Wells
-            <span class="verified-badge">🏆 Elite Partner</span>
-            <span class="availability">🟢 Available now</span>
+            Vas Orland
+            <span class="verification">✓ Verified Partner · 6+ Years</span>
         </div>
-        
-        <!-- Stats section: proven results -->
-        <div class="stats-row">
-            <div class="stat-item">
+
+        <!-- Results-driven stats (over 1000 stores, $10k+ sales) -->
+        <div class="stats-grid">
+            <div class="stat-block">
                 <div class="stat-number">1,000+</div>
-                <div class="stat-label">STORES EMPOWERED</div>
+                <div class="stat-label">STORES SCALED</div>
             </div>
-            <div class="stat-item">
+            <div class="stat-block">
                 <div class="stat-number">$10K+</div>
-                <div class="stat-label">SALES PER STORE</div>
+                <div class="stat-label">AVG SALES PER STORE</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">SUCCESS RATE</div>
+            <div class="stat-block">
+                <div class="stat-number">$12M+</div>
+                <div class="stat-label">GENERATED REVENUE</div>
             </div>
         </div>
 
-        <div class="description-box">
-            <strong>⚡ Jordan Wells — Primal Lux E-Commerce Specialist</strong><br>
-            Jordan has helped <strong>over 1,000 stores</strong> generate more than <strong>$10,000 in sales each</strong> through high-conversion funnels, CRO strategies, and data-driven optimizations. From product page bottlenecks to abandoned cart recovery, Jordan delivers hands-on fixes that scale your revenue — no fluff, just results.
+        <div class="description">
+            <strong>⚡ Vas Orland — Primal Lux E-Commerce Specialist</strong><br>
+            Vas has helped <strong>over 1,000 stores</strong> generate more than <strong>$10,000 in sales each</strong> through high-conversion funnels, CRO architecture, and platform optimization. From technical bottlenecks to abandoned cart flows, Vas delivers hands-on fixes that drive revenue — no fluff, just results.
         </div>
 
-        <div class="steps-section">
-            <div class="steps-title">
-                🚀 How to get support
+        <div class="steps">
+            <h3>📋 How to get direct support</h3>
+            <div class="step-item">
+                <span class="step-number">1</span>
+                <span class="step-text">Click the button below to message Vas Orland</span>
             </div>
-            <ul class="steps-list">
-                <li><span class="step-number">1</span> Click the button below to message Jordan directly via Gmail</li>
-                <li><span class="step-number">2</span> Briefly describe your store issue or growth goal</li>
-                <li><span class="step-number">3</span> Receive a tailored action plan within hours</li>
-            </ul>
+            <div class="step-item">
+                <span class="step-number">2</span>
+                <span class="step-text">Briefly describe your store issue or growth goal</span>
+            </div>
+            <div class="step-item">
+                <span class="step-number">3</span>
+                <span class="step-text">Receive a tailored action plan within 2–4 hours</span>
+            </div>
         </div>
 
         <!-- 
-            Clean mailto link: No ticket ID, just a simple subject & minimal body prompt.
-            Specialist from Primal Lux E-Commerce, not Shopify.
+            mailto link: Clean, professional, NO ticket ID, just a direct line to specialist.
+            Opens Gmail or default email client with minimal prefill.
         -->
-        <a href="mailto:support@primallux.com?subject=Growth%20Support%20Request%20-%20Primal%20Lux&body=Hello%20Jordan%2C%0A%0APlease%20describe%20your%20e-commerce%20issue%20or%20goal%3A%0A%0A%0AStore%20URL%3A%0A%0AThank%20you." 
-           class="message-button">
-            ✉️ Message Jordan Wells (Opens Email)
+        <a href="mailto:vas.orland@primallux.com?subject=Growth%20Support%20%7C%20Primal%20Lux%20%28Store%20Inquiry%29&body=Hello%20Vas%2C%0A%0AMy%20store%20needs%20assistance%20with%3A%0A%0A%5BDescribe%20your%20issue%20or%20goal%20briefly%5D%0A%0AStore%20URL%3A%0A%0AThanks%20for%20your%20help." 
+           class="contact-btn">
+            ✉️ Message Vas Orland (Opens Email)
         </a>
 
-        <div class="response-time">
-            ⏱️ Usually replies within 2–4 hours | Mon–Sat, 10 AM – 7 PM EST <br>
+        <div class="response-footer">
+            ⏱️ Avg. response: 2–4 hours | Mon–Sat, 10 AM – 7 PM EST <br>
             Helping brands scale past six figures.
         </div>
     </div>
 </div>
 
-<div id="toastMessage" class="toast-msg">✓ Ready to help!</div>
+<div id="toastMessage" class="toast-msg">Opening your email client...</div>
 
 <script>
-    // Simple interaction: just a small visual feedback because no ticket ID is needed.
-    const messageBtn = document.querySelector('.message-button');
-    const toastEl = document.getElementById('toastMessage');
+    // Simple UX toast when clicking the contact button (mailto will still open)
+    const btn = document.querySelector('.contact-btn');
+    const toast = document.getElementById('toastMessage');
     
-    function showToast(message) {
-        toastEl.textContent = message || 'Opening your email client...';
-        toastEl.classList.add('show');
-        setTimeout(() => {
-            toastEl.classList.remove('show');
-        }, 2000);
-    }
-    
-    // Optional: give user a small feedback when they click the button (mailto will still open)
-    if (messageBtn) {
-        messageBtn.addEventListener('click', (e) => {
-            // we don't prevent default because mailto must work.
-            // but show a little toast for better UX.
-            showToast('📧 Opening Gmail / Email app');
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            // Do not prevent default, mailto must work.
+            // Show toast feedback for better user experience.
+            toast.textContent = '📧 Opening Gmail / Email app...';
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
         });
     }
 </script>
 </body>
-    </html>
+</html>
