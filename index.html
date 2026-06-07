@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Technical Resolution Expert | Shopify Developer Support</title>
+    <title>Primal Lux E-commerce | Specialist Support</title>
     <style>
         * {
             margin: 0;
@@ -45,27 +45,67 @@
             padding: 2rem 2rem 2rem 2rem;
         }
 
+        /* Logo section */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .brand-logo {
+            background: #0a0c10;
+            border-radius: 2rem;
+            padding: 0.6rem 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .logo-icon {
+            font-size: 1.6rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, #F9A826, #FFD166);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .logo-sub {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #94a3b8;
+            letter-spacing: 0.5px;
+        }
+
         .status-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: #eff6ff;
-            color: #1e40af;
+            background: #ecfdf5;
+            color: #047857;
             padding: 0.35rem 1rem;
             border-radius: 40px;
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            border: 1px solid #bfdbfe;
+            border: 1px solid #a7f3d0;
         }
 
         .status-badge .dot {
             width: 10px;
             height: 10px;
-            background: #3b82f6;
+            background: #10b981;
             border-radius: 50%;
             display: inline-block;
-            box-shadow: 0 0 0 2px #eff6ff, 0 0 0 4px #3b82f6;
+            box-shadow: 0 0 0 2px #ecfdf5, 0 0 0 4px #10b981;
         }
 
         .specialist-title {
@@ -91,16 +131,16 @@
         }
 
         .verified-badge {
-            background: #eff6ff;
-            color: #1d4ed8;
-            font-size: 0.8rem;
-            font-weight: 600;
+            background: #fef3c7;
+            color: #b45309;
+            font-size: 0.75rem;
+            font-weight: 700;
             padding: 0.2rem 0.75rem;
             border-radius: 30px;
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
-            border: 1px solid #bfdbfe;
+            border: 1px solid #fde68a;
         }
 
         .availability {
@@ -115,12 +155,43 @@
             gap: 0.3rem;
         }
 
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            background: linear-gradient(115deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 1.25rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0 1rem 0;
+            justify-content: space-between;
+        }
+        
+        .stat-item {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #F9A826;
+            letter-spacing: -0.02em;
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         .description-box {
             background: #f8fafc;
             padding: 1.4rem;
             border-radius: 1.25rem;
             margin: 1.5rem 0;
-            border-left: 5px solid #3b82f6;
+            border-left: 5px solid #F9A826;
             line-height: 1.5;
             color: #1e293b;
             font-size: 0.95rem;
@@ -169,55 +240,8 @@
             justify-content: center;
             border-radius: 60px;
             font-weight: 800;
-            color: #1e40af;
+            color: #B45309;
             box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-
-        .ticket-area {
-            background: #eff6ff;
-            border-radius: 1.2rem;
-            padding: 0.8rem 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1.2rem 0 1.8rem 0;
-            border: 1px solid #bfdbfe;
-        }
-
-        .ticket-label {
-            font-weight: 700;
-            color: #1e3a8a;
-            font-size: 0.9rem;
-        }
-
-        .ticket-id {
-            font-family: 'SF Mono', 'JetBrains Mono', monospace;
-            font-weight: 800;
-            background: white;
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            letter-spacing: 0.5px;
-            color: #0f172a;
-            border: 1px solid #93c5fd;
-        }
-
-        .copy-btn {
-            background: #ffffff;
-            border: 1px solid #60a5fa;
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: 0.2s;
-            color: #1e40af;
-        }
-
-        .copy-btn:hover {
-            background: #eff6ff;
-            border-color: #3b82f6;
         }
 
         .message-button {
@@ -225,7 +249,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
-            background: linear-gradient(95deg, #1e3a8a, #2563eb);
+            background: linear-gradient(95deg, #0f172a, #1e293b);
             color: white;
             font-weight: 700;
             font-size: 1rem;
@@ -235,13 +259,14 @@
             transition: all 0.25s ease;
             width: 100%;
             border: none;
-            box-shadow: 0 8px 14px -6px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 8px 14px -6px rgba(0, 0, 0, 0.3);
+            margin-top: 0.5rem;
         }
 
         .message-button:hover {
-            background: linear-gradient(95deg, #1e3a8a, #1d4ed8);
+            background: linear-gradient(95deg, #1e293b, #0f172a);
             transform: scale(1.01);
-            box-shadow: 0 12px 20px -8px rgba(37, 99, 235, 0.45);
+            box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.45);
         }
 
         .response-time {
@@ -262,6 +287,9 @@
             }
             .expert-name {
                 font-size: 1.3rem;
+            }
+            .stat-number {
+                font-size: 1.2rem;
             }
         }
 
@@ -287,6 +315,20 @@
             visibility: visible;
             opacity: 0.95;
         }
+        
+        /* subtle image placeholder using the provided text as badge */
+        .logo-img-badge {
+            background: #0a0c10;
+            border-radius: 60px;
+            padding: 0.3rem 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .brand-icon {
+            font-size: 1.3rem;
+        }
     </style>
 </head>
 <body>
@@ -294,87 +336,99 @@
 <div class="resolution-card">
     <div class="header-accent"></div>
     <div class="card-content">
+        <!-- Logo section: representation of "Primal Lux E-commerce" with image-like style -->
+        <div class="logo-container">
+            <div class="brand-logo">
+                <span class="logo-icon">🛍️</span>
+                <span class="logo-text">PRIMAL LUX</span>
+                <span class="logo-sub">E-COMMERCE</span>
+            </div>
+        </div>
+        
         <div class="status-badge">
-            <span class="dot"></span> ⚙️ Direct line to your Technical Expert
+            <span class="dot"></span> ✅ Direct line to your Growth Specialist
         </div>
 
         <div class="specialist-title">
-            Technical Resolution Expert
+            E-Commerce Success Expert
         </div>
         <div class="expert-name">
-            Vas Horland
-            <span class="verified-badge">✓ Senior Engineer</span>
+            Jordan Wells
+            <span class="verified-badge">🏆 Elite Partner</span>
             <span class="availability">🟢 Available now</span>
+        </div>
+        
+        <!-- Stats section: proven results -->
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">STORES EMPOWERED</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">$10K+</div>
+                <div class="stat-label">SALES PER STORE</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">SUCCESS RATE</div>
+            </div>
         </div>
 
         <div class="description-box">
-            Vas Horland is your dedicated <strong>Technical Resolution Expert</strong> — specializing in debugging Shopify Liquid, REST & GraphQL API issues, theme conflicts, slow checkout performance, webhook errors, and app integration failures. Whether you're facing cryptic console errors, 500 server responses, broken scripts, or custom code malfunctions, Vas delivers fast, human-led root cause analysis and production-grade fixes to restore your storefront functionality.
+            <strong>⚡ Jordan Wells — Primal Lux E-Commerce Specialist</strong><br>
+            Jordan has helped <strong>over 1,000 stores</strong> generate more than <strong>$10,000 in sales each</strong> through high-conversion funnels, CRO strategies, and data-driven optimizations. From product page bottlenecks to abandoned cart recovery, Jordan delivers hands-on fixes that scale your revenue — no fluff, just results.
         </div>
 
         <div class="steps-section">
             <div class="steps-title">
-                🛠️ How to proceed
+                🚀 How to get support
             </div>
             <ul class="steps-list">
-                <li><span class="step-number">1</span> Copy your unique Developer Ticket ID below</li>
-                <li><span class="step-number">2</span> Click the button to message Vas Horland via Gmail app</li>
-                <li><span class="step-number">3</span> Paste Ticket ID and describe your technical issue</li>
+                <li><span class="step-number">1</span> Click the button below to message Jordan directly via Gmail</li>
+                <li><span class="step-number">2</span> Briefly describe your store issue or growth goal</li>
+                <li><span class="step-number">3</span> Receive a tailored action plan within hours</li>
             </ul>
         </div>
 
-        <div class="ticket-area">
-            <span class="ticket-label">🔧 Developer Ticket ID:</span>
-            <span class="ticket-id" id="ticketId">#TECH-1da15b</span>
-            <button class="copy-btn" id="copyTicketBtn">📋 Copy ID</button>
-        </div>
-
         <!-- 
-            Minimal mailto: only ticket ID and a short "Describe your issue:" prompt.
-            No extra instructions, placeholders, or formatting.
+            Clean mailto link: No ticket ID, just a simple subject & minimal body prompt.
+            Specialist from Primal Lux E-Commerce, not Shopify.
         -->
-        <a href="mailto:shopifydeveloperteam.email@gmail.com?subject=Ticket%20%23TECH-1da15b&body=Ticket%20ID%3A%20%23TECH-1da15b%0A%0ADescribe%20your%20issue%3A%0A" 
+        <a href="mailto:support@primallux.com?subject=Growth%20Support%20Request%20-%20Primal%20Lux&body=Hello%20Jordan%2C%0A%0APlease%20describe%20your%20e-commerce%20issue%20or%20goal%3A%0A%0A%0AStore%20URL%3A%0A%0AThank%20you." 
            class="message-button">
-            ✉️ Message Vas Horland (opens Gmail app)
+            ✉️ Message Jordan Wells (Opens Email)
         </a>
 
         <div class="response-time">
-            ⏱️ Average response: 5–10 minutes (Mon–Fri, 9 AM – 6 PM EST) <br>
-            Deep expertise in Shopify core & custom development.
+            ⏱️ Usually replies within 2–4 hours | Mon–Sat, 10 AM – 7 PM EST <br>
+            Helping brands scale past six figures.
         </div>
     </div>
 </div>
 
-<div id="toastMessage" class="toast-msg">Ticket ID copied!</div>
+<div id="toastMessage" class="toast-msg">✓ Ready to help!</div>
 
 <script>
-    (function() {
-        const copyBtn = document.getElementById('copyTicketBtn');
-        const ticketSpan = document.getElementById('ticketId');
-        const toastEl = document.getElementById('toastMessage');
-
-        function showToast(message) {
-            toastEl.textContent = message || 'Ticket ID copied!';
-            toastEl.classList.add('show');
-            setTimeout(() => {
-                toastEl.classList.remove('show');
-            }, 2000);
-        }
-
-        copyBtn.addEventListener('click', () => {
-            const ticketText = ticketSpan.innerText.trim();
-            navigator.clipboard.writeText(ticketText).then(() => {
-                showToast(`✅ ${ticketText} copied`);
-            }).catch(() => {
-                const textarea = document.createElement('textarea');
-                textarea.value = ticketText;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showToast(`📋 ${ticketText} copied (fallback)`);
-            });
+    // Simple interaction: just a small visual feedback because no ticket ID is needed.
+    const messageBtn = document.querySelector('.message-button');
+    const toastEl = document.getElementById('toastMessage');
+    
+    function showToast(message) {
+        toastEl.textContent = message || 'Opening your email client...';
+        toastEl.classList.add('show');
+        setTimeout(() => {
+            toastEl.classList.remove('show');
+        }, 2000);
+    }
+    
+    // Optional: give user a small feedback when they click the button (mailto will still open)
+    if (messageBtn) {
+        messageBtn.addEventListener('click', (e) => {
+            // we don't prevent default because mailto must work.
+            // but show a little toast for better UX.
+            showToast('📧 Opening Gmail / Email app');
         });
-    })();
+    }
 </script>
 </body>
-</html>
+    </html>
