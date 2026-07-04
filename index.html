@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Primal Lux | E-Commerce Growth Specialist</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Primal Lux Agency</title>
     <style>
+        /* ───────── RESET & BASE ───────── */
         * {
             margin: 0;
             padding: 0;
@@ -12,399 +13,393 @@
         }
 
         body {
-            background: #f0f2f5;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            background: #0b0b0f;
+            padding: 20px;
+            background-image: radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+                              radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.06) 0%, transparent 60%);
         }
 
-        .support-card {
-            max-width: 680px;
+        /* ───────── CARD ───────── */
+        .card {
+            max-width: 400px;
             width: 100%;
-            background: #ffffff;
-            border-radius: 1.5rem;
-            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.2s ease;
-        }
-
-        .support-card:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Logo Header */
-        .logo-header {
-            background: #0a0c10;
-            padding: 1.25rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #2d2f36;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .logo-icon {
-            background: #F9A826;
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #0a0c10;
-        }
-
-        .logo-text {
-            font-weight: 800;
-            font-size: 1.4rem;
-            letter-spacing: -0.5px;
-            color: white;
-        }
-
-        .logo-text span {
-            color: #F9A826;
-        }
-
-        .badge-header {
-            background: rgba(249, 168, 38, 0.15);
-            padding: 0.3rem 0.9rem;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #F9A826;
-            border: 1px solid rgba(249, 168, 38, 0.3);
-        }
-
-        .card-content {
-            padding: 2rem;
-        }
-
-        .status-row {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .online-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #ecfdf5;
-            color: #067647;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .online-dot {
-            width: 8px;
-            height: 8px;
-            background: #12b76a;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .expert-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #475467;
-            letter-spacing: 0.3px;
-            margin-bottom: 0.25rem;
-        }
-
-        .expert-name {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #101828;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .verification {
-            background: #fef3c7;
-            color: #b45309;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: flex;
-            gap: 1rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-        }
-
-        .stat-block {
-            flex: 1;
-            background: #f9fafb;
-            border-radius: 1rem;
-            padding: 0.9rem 0.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-radius: 48px;
+            padding: 44px 28px 36px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.04);
             text-align: center;
-            border: 1px solid #eaecf0;
+            transition: all 0.3s ease;
         }
 
-        .stat-number {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #F9A826;
-            line-height: 1.2;
+        /* ───────── AVATAR / LOGO ───────── */
+        .avatar-wrap {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 18px;
         }
 
-        .stat-label {
-            font-size: 0.7rem;
+        .avatar-ring {
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #f59e0b, #ec4899, #8b5cf6, #f59e0b);
+            opacity: 0.6;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .avatar {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ───────── TYPOGRAPHY ───────── */
+        .name {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            font-size: 12px;
             font-weight: 500;
-            color: #475467;
-            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 100px;
+            border: 1px solid rgba(245, 158, 11, 0.15);
+            margin-bottom: 16px;
             letter-spacing: 0.3px;
         }
 
-        .description {
-            background: #f9fafb;
-            padding: 1.25rem;
-            border-radius: 1rem;
-            margin: 1.25rem 0;
-            border-left: 4px solid #F9A826;
+        .subtitle {
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 28px;
             line-height: 1.5;
-            color: #344054;
-            font-size: 0.95rem;
         }
 
-        .steps {
-            margin: 1.5rem 0;
+        .subtitle span {
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        .steps h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #101828;
-            margin-bottom: 0.75rem;
+        /* ───────── DIVIDER ───────── */
+        .divider {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 12px;
+            margin-bottom: 24px;
         }
-
-        .step-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.7rem 0;
-            border-bottom: 1px solid #eaecf0;
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
         }
-
-        .step-number {
-            width: 26px;
-            height: 26px;
-            background: #fff1e0;
-            color: #F9A826;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 30px;
-            font-size: 0.8rem;
-        }
-
-        .step-text {
+        .divider-text {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 11px;
             font-weight: 500;
-            color: #1d2939;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .contact-btn {
-            display: inline-flex;
+        /* ───────── BUTTONS ───────── */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .btn {
+            display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
-            background: #0a0c10;
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-            padding: 0.9rem 1.5rem;
+            gap: 14px;
+            padding: 17px 20px;
             border-radius: 60px;
+            font-size: 16px;
+            font-weight: 600;
             text-decoration: none;
-            transition: all 0.2s ease;
-            width: 100%;
+            color: #fff;
+            transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
             border: none;
             cursor: pointer;
-            margin: 0.5rem 0 0.5rem;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .contact-btn:hover {
-            background: #F9A826;
-            color: #0a0c10;
-            transform: translateY(-1px);
-            box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.2);
+        .btn:active {
+            transform: scale(0.97);
         }
 
-        .response-footer {
+        .btn .icon {
+            font-size: 22px;
+            line-height: 1;
+            width: 28px;
             text-align: center;
-            font-size: 0.7rem;
-            color: #667085;
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eaecf0;
+            flex-shrink: 0;
         }
 
-        .toast-msg {
-            visibility: hidden;
-            min-width: 220px;
-            background-color: #101828;
-            color: #fff;
+        .btn .label {
+            flex: 1;
             text-align: center;
-            border-radius: 40px;
-            padding: 8px 20px;
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.85rem;
-            opacity: 0;
-            transition: opacity 0.25s;
-            z-index: 1000;
-            white-space: nowrap;
-            font-weight: 500;
         }
-        .toast-msg.show {
-            visibility: visible;
+
+        .btn .arrow {
+            opacity: 0.5;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover .arrow {
             opacity: 1;
         }
 
-        @media (max-width: 550px) {
-            body {
-                padding: 1rem;
+        /* ── WhatsApp ── */
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.2);
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.35);
+        }
+
+        /* ── Instagram ── */
+        .btn-instagram {
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            box-shadow: 0 8px 28px rgba(225, 48, 108, 0.2);
+        }
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(225, 48, 108, 0.35);
+        }
+
+        /* ── Telegram ── */
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #005a8c);
+            box-shadow: 0 8px 28px rgba(0, 136, 204, 0.2);
+        }
+        .btn-telegram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 136, 204, 0.35);
+        }
+
+        /* ───────── FOOTER ───────── */
+        .footer {
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer .dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #34d399;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        /* ───────── RESPONSIVE TWEAKS ───────── */
+        @media (max-width: 440px) {
+            .card {
+                padding: 32px 20px 28px;
+                border-radius: 36px;
             }
-            .expert-name {
-                font-size: 1.6rem;
+
+            .avatar-wrap {
+                width: 80px;
+                height: 80px;
             }
-            .card-content {
-                padding: 1.5rem;
+
+            .avatar {
+                font-size: 34px;
             }
-            .logo-text {
-                font-size: 1.1rem;
+
+            .name {
+                font-size: 22px;
+            }
+
+            .btn {
+                padding: 15px 16px;
+                font-size: 15px;
+                gap: 12px;
+            }
+
+            .btn .icon {
+                font-size: 20px;
+                width: 24px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .card {
+                padding: 24px 16px 20px;
+            }
+
+            .btn {
+                padding: 13px 12px;
+                font-size: 14px;
+                gap: 10px;
+            }
+
+            .btn .icon {
+                font-size: 18px;
+                width: 20px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+            }
+        }
+
+        /* ───────── SAFE AREA ───────── */
+        @supports (padding: max(0px)) {
+            .card {
+                padding-left: max(28px, env(safe-area-inset-left));
+                padding-right: max(28px, env(safe-area-inset-right));
+            }
+        }
+
+        /* ───────── REDUCED MOTION ───────── */
+        @media (prefers-reduced-motion: reduce) {
+            .avatar-ring {
+                animation: none;
+            }
+            .btn:hover {
+                transform: none !important;
+            }
+            .footer .status-dot {
+                animation: none;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="support-card">
-    <!-- Professional Logo Header - Primal Lux E-commerce -->
-    <div class="logo-header">
-        <div class="logo-area">
-            <div class="logo-icon">PL</div>
-            <div class="logo-text">PRIMAL <span>LUX</span></div>
-        </div>
-        <div class="badge-header">E-COMMERCE PARTNER</div>
+<div class="card">
+
+    <!-- Avatar -->
+    <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar">✨</div>
     </div>
 
-    <div class="card-content">
-        <div class="status-row">
-            <div class="online-badge">
-                <span class="online-dot"></span> Live Support
-            </div>
-            <div class="online-badge" style="background:#eff8ff; color:#175cd3;">
-                ⚡ Priority Access
-            </div>
-        </div>
+    <!-- Name & Badge -->
+    <h1 class="name">Primal Lux Agency</h1>
+    <div class="badge">✦ Premium Service</div>
 
-        <div class="expert-title">E-COMMERCE GROWTH SPECIALIST</div>
-        <div class="expert-name">
-            Vas Orland
-            <span class="verification">✓ Verified Partner · 6+ Years</span>
-        </div>
+    <!-- Subtitle -->
+    <p class="subtitle">
+        <span>Let's elevate your brand!</span> — Connect with us below.
+    </p>
 
-        <!-- Results-driven stats (over 1000 stores, $10k+ sales) -->
-        <div class="stats-grid">
-            <div class="stat-block">
-                <div class="stat-number">1,000+</div>
-                <div class="stat-label">STORES SCALED</div>
-            </div>
-            <div class="stat-block">
-                <div class="stat-number">$10K+</div>
-                <div class="stat-label">AVG SALES PER STORE</div>
-            </div>
-            <div class="stat-block">
-                <div class="stat-number">$12M+</div>
-                <div class="stat-label">GENERATED REVENUE</div>
-            </div>
-        </div>
+    <!-- Divider -->
+    <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-text">Contact</span>
+        <span class="divider-line"></span>
+    </div>
 
-        <div class="description">
-            <strong>⚡ Vas Orland — Primal Lux E-Commerce Specialist</strong><br>
-            Vas has helped <strong>over 1,000 stores</strong> generate more than <strong>$10,000 in sales each</strong> through high-conversion funnels, CRO architecture, and platform optimization. From technical bottlenecks to abandoned cart flows, Vas delivers hands-on fixes that drive revenue — no fluff, just results.
-        </div>
+    <!-- Buttons -->
+    <div class="btn-group">
 
-        <div class="steps">
-            <h3>📋 How to get direct support</h3>
-            <div class="step-item">
-                <span class="step-number">1</span>
-                <span class="step-text">Click the button below to message Vas Orland</span>
-            </div>
-            <div class="step-item">
-                <span class="step-number">2</span>
-                <span class="step-text">Briefly describe your store issue or growth goal</span>
-            </div>
-            <div class="step-item">
-                <span class="step-number">3</span>
-                <span class="step-text">Receive a tailored action plan within 2–4 hours</span>
-            </div>
-        </div>
-
-        <!-- 
-            mailto link: Clean, professional, NO ticket ID, just a direct line to specialist.
-            Opens Gmail or default email client with minimal prefill.
-        -->
-        <a href="mailto:vas.orland@primallux.com?subject=Growth%20Support%20%7C%20Primal%20Lux%20%28Store%20Inquiry%29&body=Hello%20Vas%2C%0A%0AMy%20store%20needs%20assistance%20with%3A%0A%0A%5BDescribe%20your%20issue%20or%20goal%20briefly%5D%0A%0AStore%20URL%3A%0A%0AThanks%20for%20your%20help." 
-           class="contact-btn">
-            ✉️ Message Vas Orland (Opens Email)
+        <!-- Instagram DM -->
+        <a href="https://ig.me/m/primalecommerce"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-instagram">
+            <span class="icon">📸</span>
+            <span class="label">Instagram DM</span>
+            <span class="arrow">→</span>
         </a>
 
-        <div class="response-footer">
-            ⏱️ Avg. response: 2–4 hours | Mon–Sat, 10 AM – 7 PM EST <br>
-            Helping brands scale past six figures.
-        </div>
+        <!-- Telegram DM -->
+        <a href="https://t.me/primalux0"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-telegram">
+            <span class="icon">✈️</span>
+            <span class="label">Telegram DM</span>
+            <span class="arrow">→</span>
+        </a>
+
+        <!-- WhatsApp Chat -->
+        <a href="https://wa.link/5bqxd8"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-whatsapp">
+            <span class="icon">💬</span>
+            <span class="label">WhatsApp Chat</span>
+            <span class="arrow">→</span>
+        </a>
+
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <span class="status">
+            <span class="status-dot"></span>
+            Online
+        </span>
+        <span class="dot"></span>
+        <span>Response within 2hrs</span>
+    </div>
+
 </div>
 
-<div id="toastMessage" class="toast-msg">Opening your email client...</div>
-
-<script>
-    // Simple UX toast when clicking the contact button (mailto will still open)
-    const btn = document.querySelector('.contact-btn');
-    const toast = document.getElementById('toastMessage');
-    
-    if (btn) {
-        btn.addEventListener('click', (e) => {
-            // Do not prevent default, mailto must work.
-            // Show toast feedback for better user experience.
-            toast.textContent = '📧 Opening Gmail / Email app...';
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 2500);
-        });
-    }
-</script>
 </body>
 </html>
